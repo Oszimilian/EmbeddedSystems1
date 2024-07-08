@@ -1,0 +1,119 @@
+Component: Arm Compiler for Embedded 6.21 Tool: armlink [5ec1fa00]
+
+==============================================================================
+
+Section Cross References
+
+    stm32init.o(init) refers to searchmin.o(Hauptprogramm) for Start
+    stm32init.o(RESET) refers to stm32init.o(stack) for __initial_sp
+    stm32init.o(RESET) refers to stm32init.o(init) for Reset_Handler
+    stm32init.o(RESET) refers to stm32init.o(handler) for NMI_Handler
+    searchmin.o(Hauptprogramm) refers to searchmin.o(Daten) for min
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    STM32Init.s                              0x00000000   Number         0  stm32init.o ABSOLUTE
+    SearchMin.s                              0x00000000   Number         0  searchmin.o ABSOLUTE
+    RESET                                    0x08000000   Section       64  stm32init.o(RESET)
+    Hauptprogramm                            0x08000040   Section       88  searchmin.o(Hauptprogramm)
+    zahlen                                   0x0800006c   Data          32  searchmin.o(Hauptprogramm)
+    _zahlen                                  0x0800008c   Data           0  searchmin.o(Hauptprogramm)
+    HardFault_Handler                        0x08000099   Thumb Code     0  stm32init.o(handler)
+    NMI_Handler                              0x08000099   Thumb Code     0  stm32init.o(handler)
+    handler                                  0x08000098   Section        2  stm32init.o(handler)
+    init                                     0x0800009c   Section        4  stm32init.o(init)
+    min                                      0x20000000   Data           4  searchmin.o(Daten)
+    Daten                                    0x20000000   Section        4  searchmin.o(Daten)
+    stack                                    0x20000004   Section     1024  stm32init.o(stack)
+    __initial_sp                             0x20000404   Data           0  stm32init.o(stack)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  stm32init.o(RESET)
+    Start                                    0x08000041   Thumb Code     4  searchmin.o(Hauptprogramm)
+    Reset_Handler                            0x0800009d   Thumb Code     4  stm32init.o(init)
+    Stack                                    0x20000004   Data        1024  stm32init.o(stack)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0800009d
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000000a4, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000000a0, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000040   Data   RO            3    RESET               stm32init.o
+    0x08000040   0x08000040   0x00000058   Code   RO           13    Hauptprogramm       searchmin.o
+    0x08000098   0x08000098   0x00000002   Code   RO            4    handler             stm32init.o
+    0x0800009a   0x0800009a   0x00000002   PAD
+    0x0800009c   0x0800009c   0x00000004   Code   RO            1  * init                stm32init.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080000a0, Size: 0x00000004, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x080000a0   0x00000004   Data   RW           14    Daten               searchmin.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000004, Load base: 0x080000a4, Size: 0x00000400, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000004        -       0x00000400   Zero   RW            2    stack               stm32init.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        88         44          0          4          0        244   searchmin.o
+         6          0         64          0       1024        684   stm32init.o
+
+    ----------------------------------------------------------------------
+        96         44         64          4       1024        928   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+        96         44         64          4       1024        876   Grand Totals
+        96         44         64          4       1024        876   ELF Image Totals
+        96         44         64          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  160 (   0.16kB)
+    Total RW  Size (RW Data + ZI Data)              1028 (   1.00kB)
+    Total ROM Size (Code + RO Data + RW Data)        164 (   0.16kB)
+
+==============================================================================
+
