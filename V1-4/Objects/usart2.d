@@ -1,4 +1,4 @@
-./objects/usart2.o: ..\..\V2\USART2.c RTE\_Target_1\Pre_Include_Global.h \
+./objects/usart2.o: USART2.c RTE\_Target_1\Pre_Include_Global.h \
   C:\Users\maximilian-tuxedo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h \
   C:\Users\maximilian-tuxedo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   C:\Users\maximilian-tuxedo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h \

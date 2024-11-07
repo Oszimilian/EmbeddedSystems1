@@ -199,7 +199,7 @@ void ExecCmd(	int* delay,
 							volatile unsigned int* dest_pos_step,
 							float* temp,
 							int* resolution,
-							int *clock_temp_en) {
+							unsigned int *clock_temp_en) {
 	if (USART2CmdFlag == 1) {
 		
 		char c1 = 'z';
@@ -384,7 +384,7 @@ void printTempToDisplay(float temp, int resolution) {
 		LCDSendString(c);
 		temp_count = 0;
 	}
-}
+} 
 
 void visTemp(float temp, volatile unsigned int* pos, volatile unsigned int* clock_temp_en) {
 	if (temp >= 20.0f && temp <= 30.0f && *clock_temp_en == 1) {
@@ -419,7 +419,7 @@ int main (void)
 	tmp_field temp;
 	float real_temp;
 	int resolution = 3;
-	int clock_temp_en = 0;
+	unsigned int clock_temp_en = 0;
 	
 	SysTickTime(1);
 	SysTickEnable();

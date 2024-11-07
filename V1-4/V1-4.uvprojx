@@ -402,12 +402,12 @@
             <File>
               <FileName>USART2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\V2\USART2.c</FilePath>
+              <FilePath>USART2.c</FilePath>
             </File>
             <File>
               <FileName>DAC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\V2\DAC.c</FilePath>
+              <FilePath>DAC.c</FilePath>
             </File>
             <File>
               <FileName>v1_adc.h</FileName>
@@ -417,32 +417,32 @@
             <File>
               <FileName>DAC.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\V2\DAC.h</FilePath>
+              <FilePath>DAC.h</FilePath>
             </File>
             <File>
               <FileName>USART2.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\V2\USART2.h</FilePath>
+              <FilePath>USART2.h</FilePath>
             </File>
             <File>
               <FileName>TIM3_PWM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\V3\TIM3_PWM.c</FilePath>
+              <FilePath>TIM3_PWM.c</FilePath>
             </File>
             <File>
               <FileName>TIM3_PWM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\V3\TIM3_PWM.h</FilePath>
+              <FilePath>TIM3_PWM.h</FilePath>
             </File>
             <File>
               <FileName>Stepper.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\V3\Stepper.c</FilePath>
+              <FilePath>Stepper.c</FilePath>
             </File>
             <File>
               <FileName>Stepper.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\V3\Stepper.h</FilePath>
+              <FilePath>Stepper.h</FilePath>
             </File>
             <File>
               <FileName>I2C.c</FileName>
