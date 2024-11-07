@@ -17,26 +17,27 @@ Library Manager: ArmAr.exe V6.21
 Hex Converter:   FromElf.exe V6.21
 CPU DLL:         SARMCM3.DLL V5.39.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Target DLL:      UL2CM3.DLL V1.164.9.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\maximilian-tuxedo\Git\EmbeddedSystems1\C\PWMTim3\PWMTim3.uvprojx
-Project File Date:  07/08/2024
+C:\Users\maximilian-tuxedo\Git\EmbeddedSystems1\C\ButtonLEDUnion\ButtonLEDUnion.uvprojx
+Project File Date:  07/10/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'Target 1'
+Build target 'Target 1'
+main.c(21): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   21 |         unsigned  int reg = ptr->all;
+      |                       ^
+main.c(21): warning: unused variable 'reg' [-Wunused-variable]
+   21 |         unsigned  int reg = ptr->all;
+      |                       ^~~
+2 warnings generated.
 compiling main.c...
-assembling startup_stm32f446xx.s...
-RTE/Device/STM32F446RETx/system_stm32f4xx.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
-  263 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
-      |         ^~~~~~~~~~~~~
-1 warning generated.
-compiling system_stm32f4xx.c...
 linking...
-Program Size: Code=804 RO-data=468 RW-data=0 ZI-data=1632  
-".\Objects\PWMTim3.axf" - 0 Error(s), 1 Warning(s).
+Program Size: Code=444 RO-data=468 RW-data=0 ZI-data=1632  
+".\Objects\ButtonLEDUnion.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -62,10 +63,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE@5.6.0
 
    * Component: Keil::Device:Startup@2.6.3
-      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
-      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
 Build Time Elapsed:  00:00:00
 </pre>
